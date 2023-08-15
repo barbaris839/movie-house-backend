@@ -1,0 +1,138 @@
+POST http://localhost:8000/signUp
+Content-Type: application/json
+
+{
+  "fullName": "Andrii Ruzhyk",
+  "email": "senseandrey@gmail.com",
+  "password": "test",
+  "profileImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+}
+
+###
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "email": "senseandrey@gmail.com",
+  "password": "test"
+}
+
+###
+GET http://localhost:8000/users/getUsers
+
+###
+POST http://localhost:8000/users/getUserById
+Content-Type: application/json
+
+{
+  "userId": "64a735fec67adbe5615fb343"
+}
+
+###
+DELETE  http://localhost:8000/users/deleteUser
+Content-Type: application/json
+
+{
+  "userId": "64a864366e47b916279bb7a4"
+}
+
+###
+POST http://localhost:8000/users/updateUser
+Content-Type: application/json
+
+{
+  "userId": "64a7e1f491ed5f4b2616105c",
+  "email": "johnysins@gmail.com",
+  "fullName": "John Sinhs",
+  "profileImageUrl": "https://images.pexels.com/photos/1287083/pexels-photo-1287083.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287083.jpg&fm=jpg",
+  "role": "admin"
+}
+
+###
+POST http://localhost:8000/directors/createDirector
+Content-Type: application/json
+
+{
+  "fullName": "Quentin Tarantino",
+  "age": 60,
+  "imageUrl": "https://www.nme.com/wp-content/uploads/2023/04/Quentin-Tarantino@2000x1270.jpg"
+}
+
+###
+GET http://localhost:8000/directors/getDirectors
+
+###
+GET http://localhost:8000/actors/getActors
+
+###
+POST http://localhost:8000/actors/getActorById
+Content-Type: application/json
+
+{
+  "id": "64ba619b9590c79bbccd0d73"
+}
+
+###
+POST http://localhost:8000/movies/getActorMovies
+Content-Type: application/json
+
+{
+  "id": "64ba619b9590c79bbccd0d73"
+}
+
+###
+GET http://localhost:8000/movies/getTopMovies
+
+###
+POST http://localhost:8000/movies/createMovie
+Content-Type: application/json
+
+{
+  "name": "Baywatch",
+  "description": "Devoted lifeguard Mitch Buchannon butts heads with a brash new recruit, as they uncover a criminal plot that threatens the future of the bay.",
+  "imageUrl": "https://media.gq.com/photos/589874beaa4523330425546e/16:9/w_2560%2Cc_limit/Screen%2520Shot%25202017-02-06%2520at%25208.05.31%2520AM.png",
+  "rate": 7,
+  "videoUrl": "test",
+  "actors": ["64ba65119590c79bbccd0d9b", "64ba652d9590c79bbccd0d9d", "64ba65949590c79bbccd0da1"],
+  "genres": ["64ba62799590c79bbccd0d7f", "64ba628f9590c79bbccd0d87", "64ba62939590c79bbccd0d89"]
+}
+
+###
+GET http://localhost:8000/movies/getMovies
+
+###
+GET http://localhost:8000/movies/getMoviesByGenre/Adventure
+
+###
+GET http://localhost:8000/movies/getMovieById/64ba698b9590c79bbccd0dd1
+
+###
+GET http://localhost:8000/genres/getGenres
+
+###
+POST http://localhost:8000/genres/createGenre
+Content-Type: application/json
+
+{
+  "name": "History"
+}
+
+###
+POST http://localhost:8000/genres/updateGenreById
+Content-Type: application/json
+
+{
+  "id": "64a874b7d2982fdacd3f4979",
+  "name": "test3"
+}
+
+###
+DELETE  http://localhost:8000/genres/deleteGenreById
+Content-Type: application/json
+
+{
+  "id": "64a874b7d2982fdacd3f4979"
+}
+
+
+
